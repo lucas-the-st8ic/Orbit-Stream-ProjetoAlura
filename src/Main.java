@@ -1,3 +1,5 @@
+import br.com.ProjetoAlura.OrbitStream.modelos.Filmes;
+
 public class Main {
     static void main(String[] args) {
         Filmes meuFilme = new Filmes();
@@ -13,7 +15,8 @@ public class Main {
         meuFilme.avalia(9);
         meuFilme.avalia(10);
 
-        System.out.println("Quantidade de avaliações: " +meuFilme.totalDeAvaliacoes);
-        System.out.println("Soma das avaliações: " +meuFilme.somaDasAvaliacoes);
+        System.out.println("Quantidade de avaliações: " +meuFilme.getTotalDeAvaliacoes());
+        System.out.println("Nota média: " +meuFilme.calculaMedia());
+
     }
 }
