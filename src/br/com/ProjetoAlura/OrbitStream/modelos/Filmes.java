@@ -2,12 +2,45 @@ package br.com.ProjetoAlura.OrbitStream.modelos;
 
 public class Filmes {
 
-    public String nomeDoFilme;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
+    private String nomeDoFilme;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private int duracaoEmMinutos;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
-    int duracaoEmMinutos;
+
+    public String getNomeDoFilme() {
+        return nomeDoFilme;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+
+    public void setNomeDoFilme(String nomeDoFilme) {
+        this.nomeDoFilme = nomeDoFilme;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
 
     public int getTotalDeAvaliacoes() {
         return totalDeAvaliacoes;

@@ -3,10 +3,10 @@ import br.com.ProjetoAlura.OrbitStream.modelos.Filmes;
 public class Main {
     static void main(String[] args) {
         Filmes meuFilme = new Filmes();
-        meuFilme.nomeDoFilme = "O poderoso chefão";
-        meuFilme.anoDeLancamento = 1972;
-        meuFilme.incluidoNoPlano = true;
-        meuFilme.duracaoEmMinutos = 177;
+        meuFilme.setNomeDoFilme("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1972);
+        meuFilme.setIncluidoNoPlano(true);
+        meuFilme.setDuracaoEmMinutos(177);
 
 
         meuFilme.demonstraFichaTecnica();
