@@ -1,23 +1,31 @@
 import br.com.ProjetoAlura.OrbitStream.modelos.Filmes;
 import br.com.ProjetoAlura.OrbitStream.modelos.Series;
+import br.com.ProjetoAlura.OrbitStream.modelos.calculos.CalculadoraDeTempo;
 
 public class Main {
     static void main(String[] args) {
-        Filmes meuFilme = new Filmes();
-        meuFilme.setNomeDoTitulo("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1972);
-        meuFilme.setIncluidoNoPlano(true);
-        meuFilme.setDuracaoEmMinutos(177);
-        System.out.println("Duração do Filme: " +meuFilme.getDuracaoEmMinutos());
+        Filmes filme_cod001 = new Filmes();
+        filme_cod001.setNomeDoTitulo("O poderoso chefão");
+        filme_cod001.setAnoDeLancamento(1972);
+        filme_cod001.setIncluidoNoPlano(true);
+        filme_cod001.setDuracaoEmMinutos(177);
+        System.out.println("Duração do Filme: " +filme_cod001.getDuracaoEmMinutos());
 
-        meuFilme.demonstraFichaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(7.5);
-        meuFilme.avalia(9);
-        meuFilme.avalia(10);
+        filme_cod001.demonstraFichaTecnica();
+        filme_cod001.avalia(8);
+        filme_cod001.avalia(7.5);
+        filme_cod001.avalia(9);
+        filme_cod001.avalia(10);
 
-        System.out.println("Quantidade de avaliações: " +meuFilme.getTotalDeAvaliacoes());
-        System.out.println("Nota média: " +meuFilme.calculaMedia());
+        System.out.println("Quantidade de avaliações: " +filme_cod001.getTotalDeAvaliacoes());
+        System.out.println("Nota média: " +filme_cod001.calculaMedia());
+
+        Filmes filme_cod002 = new Filmes();
+        filme_cod002.setNomeDoTitulo("Avatar");
+        filme_cod002.setAnoDeLancamento(2009);
+        filme_cod002.setIncluidoNoPlano(true);
+        filme_cod002.setDuracaoEmMinutos(162);
+
 
 
         Series Serie_cod001_Rick_And_Morty = new Series();
@@ -30,5 +38,11 @@ public class Main {
         Serie_cod001_Rick_And_Morty.setTemporadas(8);
         Serie_cod001_Rick_And_Morty.setEpisodiosPorTemporada(11);
         System.out.println("Duração em minutos série completa: " +Serie_cod001_Rick_And_Morty.getDuracaoEmMinutos());
+
+        CalculadoraDeTempo incluirTempo = new CalculadoraDeTempo();
+        incluirTempo.incluirTituloNoCalculo(filme_cod001);
+        incluirTempo.incluirTituloNoCalculo(filme_cod002);
+        incluirTempo.incluirTituloNoCalculo(Serie_cod001_Rick_And_Morty);
+        System.out.println(incluirTempo.getTempoTotal());
     }
 }
