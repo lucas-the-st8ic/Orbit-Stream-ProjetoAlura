@@ -1,6 +1,8 @@
+import br.com.ProjetoAlura.OrbitStream.modelos.Episodios;
 import br.com.ProjetoAlura.OrbitStream.modelos.Filmes;
 import br.com.ProjetoAlura.OrbitStream.modelos.Series;
 import br.com.ProjetoAlura.OrbitStream.modelos.calculos.CalculadoraDeTempo;
+import br.com.ProjetoAlura.OrbitStream.modelos.calculos.Recomendacoes;
 
 public class Main {
     static void main(String[] args) {
@@ -44,5 +46,16 @@ public class Main {
         incluirTempo.incluirTituloNoCalculo(filme_cod002);
         incluirTempo.incluirTituloNoCalculo(Serie_cod001_Rick_And_Morty);
         System.out.println(incluirTempo.getTempoTotal());
+
+        Recomendacoes filtroFilme_001 = new Recomendacoes();
+        filtroFilme_001.filtra(filme_cod001);
+
+        Episodios novoEp_Piloto_00 = new Episodios();
+        novoEp_Piloto_00.setNumeroDoEpisodio(0);
+        novoEp_Piloto_00.setSerie(Serie_cod001_Rick_And_Morty);
+        novoEp_Piloto_00.setTotalDeVisualizacoes(500);
+
+        filtroFilme_001.filtra(novoEp_Piloto_00);
+
     }
 }

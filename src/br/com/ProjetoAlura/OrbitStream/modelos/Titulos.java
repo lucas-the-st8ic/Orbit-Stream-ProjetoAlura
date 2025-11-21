@@ -25,7 +25,6 @@ public class Titulos {
         return incluidoNoPlano;
     }
 
-
     public void setNomeDoTitulo(String nomeDoTitulo) {
         this.nomeDoTitulo = nomeDoTitulo;
     }
