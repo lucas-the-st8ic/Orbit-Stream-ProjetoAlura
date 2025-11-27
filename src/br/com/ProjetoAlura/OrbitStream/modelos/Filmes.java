@@ -6,8 +6,8 @@ public class Filmes extends Titulos implements Classificacoes {
 
     private String diretor;
 
-    public Filmes(String nome) {
-        this.setNomeDoTitulo(nome);
+    public Filmes(String nome, int anoDeLancamento) {
+        super(nomeDoTitulo, anoDeLancamento);
 
     }
 

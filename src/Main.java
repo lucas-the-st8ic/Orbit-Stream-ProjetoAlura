@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class Main {
     static void main(String[] args) {
-        Filmes filme_cod001 = new Filmes("O Poderoso Chefão");
+        Filmes filme_cod001 = new Filmes("O Poderoso Chefão", 1972);
         //filme_cod001.setNomeDoTitulo("O poderoso chefão");
-        filme_cod001.setAnoDeLancamento(1972);
+        //filme_cod001.setAnoDeLancamento(1972);
         filme_cod001.setIncluidoNoPlano(true);
         filme_cod001.setDuracaoEmMinutos(177);
         System.out.println("Duração do Filme: " +filme_cod001.getDuracaoEmMinutos());
@@ -24,17 +24,17 @@ public class Main {
         System.out.println("Quantidade de avaliações: " +filme_cod001.getTotalDeAvaliacoes());
         System.out.println("Nota média: " +filme_cod001.calculaMedia());
 
-        Filmes filme_cod002 = new Filmes("Avatar");
+        Filmes filme_cod002 = new Filmes("Avatar", 2009);
         //filme_cod002.setNomeDoTitulo("Avatar");
-        filme_cod002.setAnoDeLancamento(2009);
+        //filme_cod002.setAnoDeLancamento(2009);
         filme_cod002.setIncluidoNoPlano(true);
         filme_cod002.setDuracaoEmMinutos(162);
 
 
 
-        Series Serie_cod001_Rick_And_Morty = new Series();
-        Serie_cod001_Rick_And_Morty.setNomeDoTitulo("Rick And Morty");
-        Serie_cod001_Rick_And_Morty.setAnoDeLancamento(2013);
+        Series Serie_cod001_Rick_And_Morty = new Series("Rick And Morty", 2013);
+        //Serie_cod001_Rick_And_Morty.setNomeDoTitulo("Rick And Morty");
+        //Serie_cod001_Rick_And_Morty.setAnoDeLancamento(2013);
         Serie_cod001_Rick_And_Morty.setDuracaoEmMinutos(23);
         Serie_cod001_Rick_And_Morty.setMinutosPorEpisodio(23);
         Serie_cod001_Rick_And_Morty.demonstraFichaTecnica();
@@ -59,9 +59,9 @@ public class Main {
 
         filtroFilme_001.filtra(novoEp_Piloto_00);
 
-        Filmes filme_cod003 = new Filmes("Tróia");
+        Filmes filme_cod003 = new Filmes("Tróia", 2004);
         //filme_cod003.setNomeDoTitulo("Tróia");
-        filme_cod003.setAnoDeLancamento(2004);
+        //filme_cod003.setAnoDeLancamento(2004);
         filme_cod003.setIncluidoNoPlano(true);
         filme_cod003.setDuracaoEmMinutos(170);
         filme_cod003.avalia(10);

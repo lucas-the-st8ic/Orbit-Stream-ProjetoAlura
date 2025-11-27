@@ -9,6 +9,11 @@ public class Titulos {
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
 
+    public Titulos(String nomeDoTitulo, int anoDeLancamento) {
+        this.nomeDoTitulo = nomeDoTitulo;
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
     public String getNomeDoTitulo() {
         return nomeDoTitulo;
     }
