@@ -6,6 +6,11 @@ public class Filmes extends Titulos implements Classificacoes {
 
     private String diretor;
 
+    public Filmes(String nome) {
+        this.setNomeDoTitulo(nome);
+
+    }
+
     public String getDiretor() {
         return diretor;
     }
