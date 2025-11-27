@@ -6,7 +6,7 @@ public class Filmes extends Titulos implements Classificacoes {
 
     private String diretor;
 
-    public Filmes(String nome, int anoDeLancamento) {
+    public Filmes(String nomeDoTitulo, int anoDeLancamento) {
         super(nomeDoTitulo, anoDeLancamento);
 
     }
