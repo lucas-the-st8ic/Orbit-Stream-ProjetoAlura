@@ -4,7 +4,8 @@ import br.com.ProjetoAlura.OrbitStream.modelos.Series;
 import br.com.ProjetoAlura.OrbitStream.modelos.calculos.CalculadoraDeTempo;
 import br.com.ProjetoAlura.OrbitStream.modelos.calculos.Recomendacoes;
 
-void main() {
+static void main(String[] args) {
+
     Filmes filme_cod001 = new Filmes("O Poderoso Chefão", 1972);
 
     //filme_cod001.setNomeDoTitulo("O poderoso chefão");
