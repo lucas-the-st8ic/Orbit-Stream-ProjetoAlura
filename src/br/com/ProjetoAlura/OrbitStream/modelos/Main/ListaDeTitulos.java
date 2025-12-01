@@ -5,6 +5,7 @@ import br.com.ProjetoAlura.OrbitStream.modelos.classes.Series;
 import br.com.ProjetoAlura.OrbitStream.modelos.classes.Titulos;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ListaDeTitulos {
     static void main(String[] args) {
@@ -30,5 +31,29 @@ public class ListaDeTitulos {
             }
 
         }
+
+        ArrayList<String> coletaneaDeartistas = new ArrayList<>();
+        coletaneaDeartistas.add("Johnny Depp ");
+        coletaneaDeartistas.add("Jason Momoa ");
+        coletaneaDeartistas.add("Leonardo DiCaprio ");
+        coletaneaDeartistas.add("Brad Pitt ");
+        coletaneaDeartistas.add("Al Pacino ");
+        coletaneaDeartistas.add("Clint Eastwood ");
+        coletaneaDeartistas.add("Marlon Brando ");
+        coletaneaDeartistas.add("Liam Neeson ");
+        coletaneaDeartistas.add("Keanu Reeves ");
+
+        System.out.println(coletaneaDeartistas);
+
+        Collections.sort(coletaneaDeartistas);
+
+        System.out.println("Filtro por ordem Alfabética: ");
+        System.out.println(coletaneaDeartistas);
+
+
+        System.out.println(coletaneaDeTitulos);
+        Collections.sort(coletaneaDeTitulos);
+        System.out.println("Filtro de filmes e séries por ordem alfabética: ");
+        System.out.println(coletaneaDeTitulos);
     }
 }

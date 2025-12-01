@@ -1,6 +1,6 @@
 package br.com.ProjetoAlura.OrbitStream.modelos.classes;
 
-public class Titulos {
+public class Titulos implements Comparable<Titulos> {
 
     private String nomeDoTitulo;
     private int anoDeLancamento;
@@ -64,4 +64,11 @@ public class Titulos {
     public double calculaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
+
+    @Override
+    public int compareTo(Titulos outroTitulo) {
+        return this.getNomeDoTitulo().compareTo(outroTitulo.getNomeDoTitulo());
+    }
+
+    
 }
