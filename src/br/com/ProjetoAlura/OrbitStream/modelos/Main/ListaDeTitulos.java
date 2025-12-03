@@ -7,6 +7,7 @@ import br.com.ProjetoAlura.OrbitStream.modelos.classes.Titulos;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class ListaDeTitulos {
     static void main(String[] args) {
@@ -33,7 +34,7 @@ public class ListaDeTitulos {
 
         }
 
-        ArrayList<String> coletaneaDeartistas = new ArrayList<>();
+        List<String> coletaneaDeartistas = new ArrayList<>();
         coletaneaDeartistas.add("Johnny Depp ");
         coletaneaDeartistas.add("Jason Momoa ");
         coletaneaDeartistas.add("Leonardo DiCaprio ");
