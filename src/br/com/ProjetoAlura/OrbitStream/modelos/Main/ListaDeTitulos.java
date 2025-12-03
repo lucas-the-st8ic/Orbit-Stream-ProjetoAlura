@@ -6,6 +6,7 @@ import br.com.ProjetoAlura.OrbitStream.modelos.classes.Titulos;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class ListaDeTitulos {
     static void main(String[] args) {
@@ -54,6 +55,10 @@ public class ListaDeTitulos {
         System.out.println(coletaneaDeTitulos);
         Collections.sort(coletaneaDeTitulos);
         System.out.println("Filtro de filmes e séries por ordem alfabética: ");
+        System.out.println(coletaneaDeTitulos);
+
+        coletaneaDeTitulos.sort(Comparator.comparing(Titulos::getAnoDeLancamento));
+        System.out.println("Filtro de filmes e séries por ano: ");
         System.out.println(coletaneaDeTitulos);
     }
 }
