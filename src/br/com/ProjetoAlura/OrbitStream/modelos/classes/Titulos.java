@@ -1,11 +1,11 @@
 package br.com.ProjetoAlura.OrbitStream.modelos.classes;
 
+import br.com.ProjetoAlura.OrbitStream.excecao.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulos implements Comparable<Titulos> {
-    @SerializedName("Title")
+
     private String nomeDoTitulo;
-    @SerializedName("Year")
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
     private int duracaoEmMinutos;
@@ -19,6 +19,10 @@ public class Titulos implements Comparable<Titulos> {
 
     public Titulos(TituloOmdb meutituloOmdb) {
         this.nomeDoTitulo = meutituloOmdb.title();
+
+        if (meutituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano por possuir mais de 04 caractéres");
+        }
         this.anoDeLancamento = Integer.valueOf(meutituloOmdb.year());
 
         int posicao = meutituloOmdb.runtime().lastIndexOf(" ");
